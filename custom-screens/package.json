@@ -1,6 +1,6 @@
 {
-  "name": "everfi-custom-screens",
-  "homepage": "https://wmblocker.github.io/everfi-custom-screens/",
+  "name": "custom-screen-generator",
+  "homepage": "https://nickwright2471.github.io/custom-screen-generator/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

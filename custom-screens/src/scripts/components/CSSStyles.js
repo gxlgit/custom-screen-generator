@@ -13,7 +13,7 @@ export class Option1 extends Component{
             .option-1 .cs-header {
               height: 75px;
               background-color: #f8f9fa;
-              border-bottom: 6px solid #ee5030; }
+              border-bottom: 6px solid rgb(15, 174, 166); }
               .option-1 .cs-header .cs-header-text {
                 color: #000;
                 font-size: 30px !important;
