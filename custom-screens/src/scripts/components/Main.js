@@ -24,37 +24,37 @@ class Main extends Component{
                         </a>
                         <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                         <div className="row">
-                            <div className="col-6"><Link className="dropdown-item" to="/everfi-custom-screens/option1"><img className="option-image" src={Option1_Image}/></Link>
+                            <div className="col-6"><Link className="dropdown-item" to="/option1"><img className="option-image" src={Option1_Image}/></Link>
                             </div>
-                            <div className="col-6"><Link className="dropdown-item" to="/everfi-custom-screens/option2"><img className="option-image" src={Option2_Image}/></Link>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-6"><Link className="dropdown-item"  to="/everfi-custom-screens/option3" disabled><img className="option-image" src={Option3_Image}/></Link>
-                            </div>
-                            <div className="col-6"><Link className="dropdown-item"  to="/everfi-custom-screens/option4"><img className="option-image" src={Option4_Image}/></Link>
+                            <div className="col-6"><Link className="dropdown-item" to="/option2"><img className="option-image" src={Option2_Image}/></Link>
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-6"><Link className="dropdown-item"  to="/everfi-custom-screens/option6"><img className="option-image" src={Option6_Image}/></Link>
+                            <div className="col-6"><Link className="dropdown-item"  to="/option3" disabled><img className="option-image" src={Option3_Image}/></Link>
                             </div>
-                            <div className="col-6"><Link className="dropdown-item"  to="/everfi-custom-screens/option7"><img className="option-image" src={Option7_Image}/></Link>
+                            <div className="col-6"><Link className="dropdown-item"  to="/option4"><img className="option-image" src={Option4_Image}/></Link>
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-6"><Link className="dropdown-item"  to="/everfi-custom-screens/option8"><img className="option-image" src={Option8_Image}/></Link>
+                            <div className="col-6"><Link className="dropdown-item"  to="/option6"><img className="option-image" src={Option6_Image}/></Link>
+                            </div>
+                            <div className="col-6"><Link className="dropdown-item"  to="/option7"><img className="option-image" src={Option7_Image}/></Link>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-6"><Link className="dropdown-item"  to="/option8"><img className="option-image" src={Option8_Image}/></Link>
                             </div>
                         </div>
                         </div>
                     </div>
                     <Route exact path="/everfi-custom-screens/" component={Options.Option1} />
-                    <Route path="/everfi-custom-screens/option1" component={Options.Option1} />
-                    <Route path="/everfi-custom-screens/option2" component={Options.Option2} />
-                    <Route path="/everfi-custom-screens/option3" component={Options.Option3} />
-                    <Route path="/everfi-custom-screens/option4" component={Options.Option4} />
-                    <Route path="/everfi-custom-screens/option6" component={Options.Option6} />
-                    <Route path="/everfi-custom-screens/option7" component={Options.Option7} />
-                    <Route path="/everfi-custom-screens/option8" component={Options.Option8} />
+                    <Route path="/option1" component={Options.Option1} />
+                    <Route path="/option2" component={Options.Option2} />
+                    <Route path="/option3" component={Options.Option3} />
+                    <Route path="/option4" component={Options.Option4} />
+                    <Route path="/option6" component={Options.Option6} />
+                    <Route path="/option7" component={Options.Option7} />
+                    <Route path="/option8" component={Options.Option8} />
                 </main>
             </div>
             </Switch>
