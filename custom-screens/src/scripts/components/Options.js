@@ -15,10 +15,10 @@ export class Option1 extends Component{
             subHeadingText: "We offer Associates tools to help manage insurance costs.", actionButtonText: "Learn More", 
             actionButtonColor: "#10AEA6",
             headerBackGroundColor: "#286090",
-            headerBorderColor: "#366e9f",  
+            headerBorderColor: "#0faea6",  
             isSubHeadingBold: "normal",
             mainMessageText: "Wherever you are in life, there is a plan to help you meet your needs.Visit us to learn more about the options available to you.",
-            barColor: "#286090",
+            barColor: "#366e9f",
             linesColor: "#208aee",
             buttonHref: "https://everfi.com"
         };
