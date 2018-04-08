@@ -11,7 +11,6 @@ export class Option1 extends Component{
                     <div className="cs-header" style={{
                         background: this.props.state.headerBackGroundColor,borderBottomColor: this.props.state.headerBorderColor
                         }}>
-                        <div className="lines" style={{borderColor: this.props.state.linesColor}}></div>
                         <p className="cs-header-text" style={{color: this.props.state.headerTextColor}}>{this.props.state.headerText}</p>
                     </div>
                     <div className="col-wrap">
@@ -23,7 +22,7 @@ export class Option1 extends Component{
                             <p className="cs-sub-heading" style={{
                                 fontWeight: this.props.state.isSubHeadingBold
                                 }}>{this.props.state.subHeadingText}</p>
-                            <p className="mainMessage">{this.props.state.mainMessageText}</p>
+                            <p className="mainMessage" style={{fontWeight: this.props.state.isMainMessageBold}}>{this.props.state.mainMessageText}</p>
                             <a className="action-button" style={{backgroundColor: this.props.state.actionButtonColor}} href={this.props.state.buttonHref} target="_blank">{this.props.state.actionButtonText}</a>
                     </div>
                 </div>
@@ -118,6 +117,19 @@ export class Option4 extends Component{
     }
 }
 
+export class Option5 extends Component{
+    constructor(props){
+        super(props);
+    }
+    render(){
+        return(
+            <div className="option-5" style={{fontFamily: this.props.state.font}}>
+                    
+            </div>
+        );
+    }
+}
+
 export class Option6 extends Component{
     constructor(props){
         super(props);
@@ -175,11 +187,11 @@ export class Option8 extends Component{
     render(){
         return(
             <div className="option-8" style={{background: this.props.state.bodyBackGroundColor, fontFamily: this.props.state.font}}>
-                    <div className="cs-header" style={{
-                        borderBottomColor: this.props.state.headerBorderColor
-                        }}>
+                    <div className="cs-header">
                         <p className="cs-header-text" style={{color: this.props.state.headerTextColor}}>{this.props.state.headerText}</p>
+                        <hr />
                     </div>
+
                     <div className="col-wrap">
                         <div className="col-100">
                             <p className="cs-sub-heading" style={{color: this.props.state.mainMessageTextColor,

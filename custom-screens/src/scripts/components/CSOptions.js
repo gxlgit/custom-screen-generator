@@ -134,6 +134,15 @@ export class Option1 extends Component {
         }
     }
 
+    handleIsMainMessageBoldChange = (e) => {
+        if(e.target.checked == true){
+        this.props.onIsMainMessageBoldChange("bold");
+        }
+        else{
+            this.props.onIsMainMessageBoldChange("normal");
+        }
+    }
+
     handleLinesColorChange = (e) => {
         this.props.onLinesColorChange(e.target.value);
     }
@@ -206,8 +215,12 @@ export class Option1 extends Component {
                                         <input className="form-check-input" type="checkbox" value={this.props.state.isSubHeadingBold} onChange={this.handleIsSubHeadingBoldChange} />
                                         <label className="form-check-label" htmlFor="boldedSubHeading">Bold</label>
                                     </div>
-                                    <textarea className="form-control" rows="5" title="input" value={this.props.state.subHeadingText} onChange={this.handleSubHeadingTextChange} /><br />
+                                    <input className="form-control" title="input" value={this.props.state.subHeadingText} onChange={this.handleSubHeadingTextChange} /><br />
                                     <label className="font-weight-bold"> Body Text </label>
+                                    <div className="form-check form-check-inline ml-4">
+                                        <input className="form-check-input" type="checkbox" value={this.props.state.isMainMessageBold} onChange={this.handleIsMainMessageBoldChange} />
+                                        <label className="form-check-label" htmlFor="boldedMainMessage">Bold</label>
+                                    </div>
                                     <textarea className="form-control" rows="5" title="input"value={this.props.state.mainMessageText} onChange={this.handleMainMessageTextChange} />
                                     
                                 </div>
@@ -237,8 +250,6 @@ export class Option1 extends Component {
                         <div className="card-body">
                             <div className="form-row">
                             <FormGroup formGroup="col-md-6" label="Bar Color" value={this.props.state.barColor} onChange={this.handleBarColorChange} />
-
-                                <FormGroup formGroup="col-md-6" label="Lines Color" value={this.props.state.linesColor} onChange={this.handleLinesColorChange} />
                             </div>
                         </div>
                     </div>
@@ -600,7 +611,7 @@ export class Option3 extends Component {
                     <div className="card-header">
                         <h3><button className="btn btn-link" data-toggle="collapse" data-target="#sendCollapse-3">Review</button></h3>
                     </div>
-                    <div id="sendCollapse-3" className="collapse" data-parent="customizationOptions-3">
+                    <div id="sendCollapse-3" className="collapse show" data-parent="customizationOptions-3">
                         <div className="card-body">
                             <div className="form-row">
                                 <div className="form-group col-md-6">
@@ -781,7 +792,150 @@ export class Option4 extends Component {
                     <div className="card-header">
                         <h3><button className="btn btn-link" data-toggle="collapse" data-target="#sendCollapse-7">Review</button></h3>
                     </div>
-                    <div id="sendCollapse-7" className="collapse" data-parent="customizationOptions-7">
+                    <div id="sendCollapse-7" className="collapse show" data-parent="customizationOptions-7">
+                        <div className="card-body">
+                            <div className="form-row">
+                                <div className="form-group col-md-6">
+                                    <button className="btn btn-primary btn-send" onClick={this.sendCode}>Copy Code</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}
+
+export class Option5 extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    handlePrimaryColorChange = (e) => {
+        this.props.onPrimaryColorChange(e.target.value);
+    }
+
+    handleSecondaryColorChange = (e) => {
+        this.props.onSecondaryColorChange(e.target.value);
+    }
+
+    handleFontChange = (e) => {
+        this.props.onFontChange(e.target.value);
+    }
+
+    handleHeaderTextChange = (e) => {
+        this.props.onHeaderTextChange(e.target.value);
+    }
+
+    handleMainMessageTextChange = (e) => {
+        this.props.onMainMessageTextChange(e.target.value);
+    }
+
+    handleMainMessageTextColorChange = (e) => {
+        this.props.onMainMessageTextColorChange(e.target.value);
+    }
+
+    handleActionButtonTextChange = (e) => {
+        this.props.onActionButtonTextChange(e.target.value);
+    }
+
+    handleActionButtonColorChange = (e) => {
+        this.props.onActionButtonColorChange(e.target.value);
+    }
+
+    handleHeaderTextColorChange = (e) => {
+        this.props.onHeaderTextColorChange(e.target.value);
+    }
+
+    handleBarColorChange = (e) => {
+        this.props.onBarColorChange(e.target.value);
+    }
+
+    handleButtonHrefChange = (e) => {
+        this.props.onButtonHrefChange(e.target.value);
+    }
+
+    handleRightColumnBackGroundColorChange = (e) => {
+        this.props.onRightColumnBackGroundColorChange(e.target.value)
+    }
+
+    handleLeftColumnBackGroundColorChange = (e) => {
+        this.props.onLeftColumnBackGroundColorChange(e.target.value)
+    }
+
+
+    sendCode(){
+        var html = document.getElementById("option5").innerHTML;
+        var copyElem = document.createElement("input");
+        copyElem.setAttribute("value", html);
+        document.body.appendChild(copyElem);
+        copyElem.select();
+        document.execCommand("copy");
+        document.body.removeChild(copyElem);
+    }
+
+    render() {
+        return (       
+            <div id="customizationOptions-5">
+            <div className="card">
+                    <div className="card-header">
+                        <h3><button className="btn btn-link" data-toggle="collapse" data-target="#globalOptionsCollapse-5">Global <i className="fa fa-chevron-down" /></button></h3>
+                    </div>
+                    <div id="globalOptionsCollapse-5" className="collapse" data-parent="customizationOptions-6">
+                        <div className="card-body">
+                            <div className="form-row">
+                                <FormGroup formGroup="col-md-6" label="Primary Color" value={this.props.state.priamryColor} onChange={this.handlePrimaryColorChange} />
+                                <FormGroup formGroup="col-md-6" label="Secondary Color" value={this.props.state.secondaryColor} onChange={this.handleSecondaryColorChange} />
+                                <div className="col-md-12">
+                                    <label htmlFor="fontGroup">Font</label>
+                                    <select className="form-control" id="fontGroup" onChange={this.handleFontChange} >
+                                        <Fonts />
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="card">
+                    <div className="card-header">
+                        <h3><button className="btn btn-link" data-toggle="collapse" data-target="#headerOptionsCollapse-6">Header </button></h3>
+                    </div>
+                    <div id="headerOptionsCollapse-5" className="collapse" data-parent="customizationOptions-5">
+                        <div className="card-body">
+                            <div className="form-row">
+                                <h4 className="w-100">Header</h4>
+                                <FormGroup formGroup="col-md-12" label="Text" value={this.props.state.headerText} onChange={this.handleHeaderTextChange} />
+                                <FormGroup formGroup="col-md-6" label="Text Color" value={this.props.state.headerTextColor} onChange={this.handleHeaderTextColorChange} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="card">
+                    <div className="card-header">
+                        <h3><button className="btn btn-link" data-toggle="collapse" data-target="#mainOptionsCollapse-5">Main </button></h3>
+                    </div>
+                    <div id="mainOptionsCollapse-5" className="collapse" data-parent="customizationOptions-5">
+                        <div className="card-body">
+                            <div className="form-row">
+                                <h4 className="w-100">Main Content</h4>
+                                <label className="font-weight-bold"> Main Message Text </label>
+                                <textarea className="form-control" rows="5" title="input" value={this.props.state.mainMessageText} onChange={this.handleMainMessageTextChange} />
+                                <FormGroup formGroup="col-md-6" label="Main Message Text Color" value={this.props.state.mainMessageTextColor} onChange={this.handleMainMessageTextColorChange} />
+                                <FormGroup formGroup="col-md-6" label="Left Column Background Color" value={this.props.state.leftColumnBackGroundColor} onChange={this.handleLeftColumnBackGroundColorChange} />
+                                <FormGroup formGroup="col-md-6" label="Right Column Background Color" value={this.props.state.rightColumnBackGroundColor} onChange={this.handleRightColumnBackGroundColorChange} />
+                                <FormGroup formGroup="col-md-6" label="Button Text" value={this.props.state.actionButtonText} onChange={this.handleActionButtonTextChange} />
+                                <FormGroup formGroup="col-md-6" label="Button Color" value={this.props.state.actionButtonColor} onChange={this.handleActionButtonColorChange} />
+                                <FormGroup formGroup="col-md-6" label="Button Url" value={this.props.buttonHref} onChange={this.handleButtonHrefChange} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="card">
+                    <div className="card-header">
+                        <h3><button className="btn btn-link" data-toggle="collapse" data-target="#sendCollapse-5">Review</button></h3>
+                    </div>
+                    <div id="sendCollapse-5" className="collapse" data-parent="customizationOptions-5">
                         <div className="card-body">
                             <div className="form-row">
                                 <div className="form-group col-md-6">
@@ -1229,8 +1383,7 @@ export class Option8 extends Component {
                                 <h4 className="w-100">Header</h4>
                                 <FormGroup formGroup="col-md-12" label="Text" value={this.props.state.headerText} onChange={this.handleHeaderTextChange} />
                                 <FormGroup formGroup="col-md-6" label="Text Color" value={this.props.state.headerTextColor} onChange={this.handleHeaderTextColorChange} />
-                                <FormGroup formGroup="col-md-6" label="Border Color" value={this.props.state.headerBorderColor} onChange={this.handleHeaderBorderColorChange} />
-                            </div>
+                             </div>
                         </div>
                     </div>
                 </div>

@@ -17,7 +17,8 @@ export class Option1 extends Component{
             headerBackGroundColor: "#286090",
             headerBorderColor: "#0faea6",  
             isSubHeadingBold: "normal",
-            mainMessageText: "Wherever you are in life, there is a plan to help you meet your needs.Visit us to learn more about the options available to you.",
+            isMainMessageBold: "normal",
+            mainMessageText: "Wherever you are in life, there is a plan to help you meet your needs. Visit us to learn more about the options available to you.",
             barColor: "#366e9f",
             linesColor: "#208aee",
             buttonHref: "https://everfi.com"
@@ -62,6 +63,12 @@ export class Option1 extends Component{
     handleIsSubHeadingBoldChange = (updatedText) => {
         this.setState({
             isSubHeadingBold: updatedText
+        })
+    }
+
+    handleIsMainMessageBoldChange = (updatedText) => {
+        this.setState({
+            isMainMessageBold: updatedText
         })
     }
 
@@ -138,6 +145,7 @@ export class Option1 extends Component{
                         onHeaderTextColorChange = {this.handleHeaderTextColorChange}
                         onLinesColorChange = {this.handleLinesColorChange}
                         onIsSubHeadingBoldChange = {this.handleIsSubHeadingBoldChange}
+                        onIsMainMessageBoldChange = {this.handleIsMainMessageBoldChange}
                         onBarColorChange = {this.handleBarColorChange}
                         onHeaderBorderColorChange = {this.handleHeaderBorderColorChange}
                         onButtonHrefChange = {this.handleButtonHrefChange}
@@ -298,11 +306,11 @@ export class Option3 extends Component{
             headerText: "Did You Know?",
             headerTextColor: "#fff", 
             subHeadingText: "We offer Associates tools to help manage insurance costs.", actionButtonText: "Learn More", 
-            actionButtonColor: "#208aee",
-            headerBackGroundColor: "#5bbaed", 
+            actionButtonColor: "#10aea6",
+            headerBackGroundColor: "#286090", 
             isSubHeadingBold: "normal",
-            mainMessageText: "Wherever you are in life, there is a plan to help you meet your needs.Visit us to learn more about the options available to you.",
-            linesColor: "#208aee",
+            mainMessageText: "Wherever you are in life, there is a plan to help you meet your needs. Visit us to learn more about the options available to you.",
+            linesColor: "#10aea6",
             buttonHref: "https://everfi.com"
         };
     }
@@ -432,10 +440,10 @@ export class Option4 extends Component{
             headerText: "Did You Know?",
             headerTextColor: "#fff", 
             subHeadingText: "We offer Associates tools to help manage insurance costs.", actionButtonText: "Learn More", 
-            actionButtonColor: "#208aee",
-            headerBackGroundColor: "#5bbaed", 
+            actionButtonColor: "#51aaa3",
+            headerBackGroundColor: "#286090", 
             headerBorderColor: "#51aaa3", 
-            barColor: "#5bbaed",
+            barColor: "#366e9f",
             isSubHeadingBold: "normal",
             mainMessageText: "Wherever you are in life, there is a plan to help you meet your needs.Visit us to learn more about the options available to you.",
             buttonHref: "https://everfi.com"
@@ -556,6 +564,142 @@ export class Option4 extends Component{
                     <div className="col-md-9" id="option4">
                         <CSSStyles.Option4 />
                         <HTMLCode.Option4 
+                        state = {this.state}
+                        />
+                    </div>
+                </div>
+        );
+    }
+}
+
+
+export class Option5 extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            primaryColor: "",
+            secondaryColor: "",
+            font: "",
+            headerText: "Did You Know?",
+            leftColumnBackGroundColor: "#fff",
+            rightColumnBackGroundColor: "#208aee",
+            headerTextColor: "#000", 
+            actionButtonText: "Learn More", 
+            actionButtonColor: "#5bbaed",
+            isSubHeadingBold: "normal",
+            mainMessageText: "Wherever you are in life, there is a plan to help you meet your needs.Visit us to learn more about the options available to you.",
+            mainMessageTextColor: "#fff",
+            buttonHref: "https://everfi.com"
+        };
+    }
+
+    handlePriamryColorChange = (updatedText) => {
+        this.setState({
+            primaryColor : updatedText,
+            rightColumnBackGroundColor : updatedText,
+        });
+    }
+
+    handleSecondaryColorChange = (updatedText) => {
+        this.setState({
+            secondaryColor : updatedText,
+            actionButtonColor: updatedText,
+        });
+    }
+
+    handleFontChange = (updatedText) => {
+        this.setState({
+            font: updatedText
+        })
+    }
+
+    handleHeaderTextChange = (updatedText) => {
+        this.setState({
+            headerText : updatedText
+        });
+    }
+
+    handleMainMessageTextChange = (updatedText) => {
+        this.setState({
+            mainMessageText : updatedText
+        });
+    }
+
+    handleMainMessageTextColorChange = (updatedText) => {
+        this.setState({
+            mainMessageTextColor : updatedText
+        });
+    }
+
+    handleActionButtonTextChange = (updatedText) => {
+        this.setState({
+            actionButtonText : updatedText
+        });
+    }
+
+    handleActionButtonColorChange = (updatedText) => {
+        this.setState({
+            actionButtonColor : updatedText
+        });
+    }
+
+
+    handleHeaderTextColorChange = (updatedText) => {
+        this.setState({
+            headerTextColor : updatedText
+        });
+    }
+
+    handleButtonHrefChange = (updatedText) => {
+        this.setState({
+            buttonHref : updatedText
+        });
+    }
+
+    handleButtonHrefChange = (updatedText) => {
+        this.setState({
+            buttonHref : updatedText
+        });
+    }
+
+    handleLeftColumnBackGroundColorChange = (updatedText) => {
+        this.setState({
+            leftColumnBackGroundColor : updatedText
+        });
+    }
+
+    handleRightColumnBackGroundColorChange = (updatedText) => {
+        this.setState({
+            rightColumnBackGroundColor : updatedText
+        });
+    }
+
+
+    render(){
+        return(
+                <div className="row mt-3">
+                    <div className="col-md-3 aside-options-list">
+                        <CSOptions.Option5 
+                        state = {this.state}
+                        onPrimaryColorChange = {this.handlePriamryColorChange}
+                        onSecondaryColorChange = {this.handleSecondaryColorChange}
+                        onFontChange = {this.handleFontChange}
+                        onHeaderBackGroundColorChange = {this.handleHeaderBackGroundColorChange}
+                        onLeftColumnBackGroundColorChange = {this.handleLeftColumnBackGroundColorChange}
+                        onRightColumnBackGroundColorChange={this.handleRightColumnBackGroundColorChange}
+                        onHeaderTextChange = {this.handleHeaderTextChange}
+                        onMainMessageTextChange = {this.handleMainMessageTextChange}
+                        onMainMessageTextColorChange = {this.handleMainMessageTextColorChange}
+                        onActionButtonTextChange = {this.handleActionButtonTextChange}
+                        onActionButtonColorChange = {this.handleActionButtonColorChange}
+                        onHeaderTextColorChange = {this.handleHeaderTextColorChange}
+                        onBarColorChange = {this.handleBarColorChange}
+                        onButtonHrefChange = {this.handleButtonHrefChange}
+                    />
+                    </div>
+                    <div className="col-md-9" id="option6">
+                        <CSSStyles.Option5 />
+                        <HTMLCode.Option5 
                         state = {this.state}
                         />
                     </div>
@@ -879,15 +1023,13 @@ export class Option8 extends Component{
             secondaryColor: "",
             font: "",
             headerText: "Did You Know?",
-            headerTextColor: "#fff", 
+            headerTextColor: "#4E80B2", 
             subHeadingText: "We offer Associates tools to help manage insurance costs.", actionButtonText: "Learn More", 
-            actionButtonColor: "#208aee",
-            bodyBackGroundColor: "#5bbaed", 
-            headerBorderColor: "#51aaa3", 
-            barColor: "#5bbaed",
+            actionButtonColor: "#10aea6",
+            bodyBackGroundColor: "#ffffff", 
             isSubHeadingBold: "normal",
-            mainMessageText: "Wherever you are in life, there is a plan to help you meet your needs.Visit us to learn more about the options available to you.",
-            mainMessageTextColor: "#fff",
+            mainMessageText: "Wherever you are in life, there is a plan to help you meet your needs. Visit us to learn more about the options available to you.",
+            mainMessageTextColor: "#484848",
             buttonHref: "https://everfi.com"
         };
     }
@@ -990,7 +1132,7 @@ export class Option8 extends Component{
                         onSecondaryColorChange = {this.handleSecondaryColorChange}
                         onFontChange = {this.handleFontChange}
                         onHeaderTextChange = {this.handleHeaderTextChange}
-                        onBodyBackGroundColorChange={this.handlebodyBackGroundColorChange}
+                        onBodyBackGroundColorChange={this.handleBodyBackGroundColorChange}
                         onMainMessageTextChange = {this.handleMainMessageTextChange}
                         onMainMessageTextColorChange = {this.handleMainMessageTextColorChange}
                         onSubHeadingTextChange = {this.handleSubHeadingTextChange}

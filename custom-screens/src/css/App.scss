@@ -142,10 +142,6 @@ h3{
     }
 }
 
-.lines{
-    top:-25px !important;
-}
-
 
 .option-6{
     width:100%;
@@ -251,8 +247,9 @@ h3{
 }
 
 .dropdown-menu{
-    padding: .5rem .8rem;
+    padding: 10px 25px;
     margin: .125rem 0 0;
+    width:auto;
     background-color: #f3f3f3;
     border: 1px solid rgba(0,0,0,.15);
     border-radius: 0px;
@@ -261,19 +258,19 @@ h3{
     top: -5px !important;
 }
 .dropdown-item{
-    width: 183px;
+    max-width: 270px;
     padding: 0px;
     font-weight: 400;
     color: #212529;
     text-align: inherit;
     white-space: nowrap;
     background-color: transparent;
-    margin: 5px 0px;
+    margin: 10px 10px;
     box-shadow: 1px 1px 5px 0px #b1b1b1;
 }
 .option-image{
     width: 100%;
-    height: 110px;
+    height: 100%;
     transition: all;
 }
 .option-image:hover{
@@ -287,7 +284,7 @@ h3{
 }
 
 .col-md-9{
-    height:538px !important;
+    height:600px !important;
     position: fixed;
     right: 0;
 }
