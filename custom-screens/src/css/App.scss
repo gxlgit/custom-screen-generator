@@ -15,6 +15,17 @@ body {
     background-color: #A3A3A3;
 }
 
+.colorwheel{
+    height: 44px;
+    width: 45px;
+    background: none;
+    padding: 0px;
+    border: none;
+    margin-top: 4px;
+        position: relative;
+    right: 49px;
+}
+
 .navbar-brand img{
   height: 25px !important;
 }
@@ -283,11 +294,14 @@ h3{
 
 }
 
-.col-md-9{
+@media(min-width:768px){
+    .col-md-9{
     height:600px !important;
     position: fixed;
     right: 0;
 }
+}
+
 
 .code-box{
     margin: 20px 0px 40px 0px;
