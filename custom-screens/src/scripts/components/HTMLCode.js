@@ -24,6 +24,7 @@ export class Option1 extends Component{
                                 }}>{this.props.state.subHeadingText}</p>
                             <p className="mainMessage" style={{fontWeight: this.props.state.isMainMessageBold}}>{this.props.state.mainMessageText}</p>
                             <a className="action-button" style={{backgroundColor: this.props.state.actionButtonColor}} href={this.props.state.buttonHref} target="_blank">{this.props.state.actionButtonText}</a>
+                            <a className="action-button close-button" data-dismiss="modal" data-close="true">No Thanks</a>
                     </div>
                 </div>
             </div>
@@ -199,6 +200,7 @@ export class Option8 extends Component{
                                 }}>{this.props.state.subHeadingText}</p>
                             <p className="mainMessage" style={{color: this.props.state.mainMessageTextColor}}>{this.props.state.mainMessageText}</p>
                             <a className="action-button" style={{backgroundColor: this.props.state.actionButtonColor}} href={this.props.state.buttonHref}  target="_blank">{this.props.state.actionButtonText}</a>
+                            <a className="action-button close-button" data-dismiss="modal" data-close="true">No Thanks</a>
                     </div>
                 </div>
             </div>

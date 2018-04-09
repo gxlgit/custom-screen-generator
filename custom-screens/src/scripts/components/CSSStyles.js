@@ -75,6 +75,14 @@ export class Option1 extends Component{
               border-radius: 7px;
               margin-top: 20px;
               display: inline-block; }
+            .option-1 .action-button:hover{
+                cursor:pointer;}
+            .option-1 .close-button{
+              background-color: #afafaf;
+              color:#ffffff !important;
+               margin-left:15px !important;}
+               #site-container .custom-content .modal .modal-dialog .modal-content .modal-footer .btn{
+                display:none;}
         `
         return(
             <style>
@@ -391,6 +399,7 @@ export class Option8 extends Component{
             .option-8 .cs-header .cs-header-text {
                 color: #484848;
                 font-size: 35px !important;
+                line-height: 32px;
                 font-weight:600 !important;
                 font-family: inherit !important}
             .option-8 .cs-sub-heading{
@@ -419,6 +428,14 @@ export class Option8 extends Component{
               margin-top: 20px;
               display: inline-block;
               font-family: inherit !important }
+            .option-8 .action-button:hover{
+                cursor:pointer;}
+            .option-8 .close-button{
+              background-color: #afafaf;
+              color:#ffffff !important;
+               margin-left:15px !important;}
+               #site-container .custom-content .modal .modal-dialog .modal-content .modal-footer .btn{
+                display:none;}
         `
         return(
             <style>

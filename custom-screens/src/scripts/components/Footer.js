@@ -5,7 +5,7 @@ class Footer extends Component{
         return( 
             <footer>
                 <nav className="navbar fixed-bottom py-4" style={{backgroundColor: "#393939"}}>
-                	<i className="fa fa-question-circle"></i>
+                	<i className="fa fa-question-circle" data-toggle="modal" data-target="#helpModal"></i>
                 </nav>
             </footer>
         );

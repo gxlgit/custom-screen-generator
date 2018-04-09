@@ -160,6 +160,7 @@ export class Option1 extends Component {
         copyElem.select();
         document.execCommand("copy");
         document.body.removeChild(copyElem);
+        alert("Code copied to clipboard!");
     }
 
 
@@ -196,6 +197,7 @@ export class Option1 extends Component {
                                 <FormGroup formGroup="col-md-6" label="Text Color" value={this.props.state.headerTextColor} onChange={this.handleHeaderTextColorChange} />
                                 <FormGroup formGroup="col-md-6" label="Background Color" value={this.props.state.headerBackGroundColor} onChange={this.handleHeaderBackGroundColorChange} />
                                 <FormGroup formGroup="col-md-6" label="Border Color" value={this.props.state.headerBorderColor} onChange={this.handleHeaderBorderColorChange} />
+                                <FormGroup type="color" value={this.props.state.headerBorderColor} onChange={this.handleHeaderBorderColorChange} />
                             </div>
                         </div>
                     </div>
@@ -204,7 +206,6 @@ export class Option1 extends Component {
                 <div className="card">
                     <div className="card-header">
                         <h3><button className="btn btn-link" data-toggle="collapse" data-target="#mainOptionsCollapse-1">Body <i className="fa fa-chevron-down"></i></button></h3>
-
                     </div>
                     <div id="mainOptionsCollapse-1" className="collapse" data-parent="customizationOptions-1">
                         <div className="card-body">
@@ -344,6 +345,7 @@ export class Option2 extends Component {
         copyElem.select();
         document.execCommand("copy");
         document.body.removeChild(copyElem);
+        alert("Code copied to clipboard!");
     }
 
     render() {
@@ -520,6 +522,7 @@ export class Option3 extends Component {
         copyElem.select();
         document.execCommand("copy");
         document.body.removeChild(copyElem);
+        alert("Code copied to clipboard!");
     }
 
     render() {
@@ -699,6 +702,7 @@ export class Option4 extends Component {
         copyElem.select();
         document.execCommand("copy");
         document.body.removeChild(copyElem);
+        alert("Code copied to clipboard!");
     }
 
     render() {
@@ -872,6 +876,7 @@ export class Option5 extends Component {
         copyElem.select();
         document.execCommand("copy");
         document.body.removeChild(copyElem);
+        alert("Code copied to clipboard!");
     }
 
     render() {
@@ -1015,6 +1020,7 @@ export class Option6 extends Component {
         copyElem.select();
         document.execCommand("copy");
         document.body.removeChild(copyElem);
+        alert("Code copied to clipboard!");
     }
 
     render() {
@@ -1175,6 +1181,7 @@ export class Option7 extends Component {
         copyElem.select();
         document.execCommand("copy");
         document.body.removeChild(copyElem);
+        alert("Code copied to clipboard!");
     }
 
     render() {
@@ -1348,6 +1355,7 @@ export class Option8 extends Component {
         copyElem.select();
         document.execCommand("copy");
         document.body.removeChild(copyElem);
+        alert("Code copied to clipboard!");
     }
 
     render() {
@@ -1387,7 +1395,7 @@ export class Option8 extends Component {
                 </div>
                 <div className="card">
                     <div className="card-header">
-                        <h3><button className="btn btn-link" data-toggle="collapse" data-target="#mainOptionsCollapse-8">Main <i className="fa fa-chevron-down" /></button></h3>
+                        <h3><button className="btn btn-link" data-toggle="collapse" data-target="#mainOptionsCollapse-8">Body <i className="fa fa-chevron-down" /></button></h3>
                     </div>
                     <div id="mainOptionsCollapse-8" className="collapse" data-parent="customizationOptions-8">
                         <div className="card-body">
@@ -1399,9 +1407,10 @@ export class Option8 extends Component {
                                         <label className="form-check-label" htmlFor="boldedSubHeading">Bold</label>
                                     </div>                             
                                     <input className="form-control" title="input" value={this.props.state.subHeadingText} onChange={this.handleSubHeadingTextChange} />
+                                    <br />
+                                    <label className="font-weight-bold"> Main Message Text </label>
+                                    <textarea className="form-control" rows="5" title="input"value={this.props.state.mainMessageText} onChange={this.handleMainMessageTextChange} />
                                 </div>
-                                <label className="font-weight-bold"> Main Message Text </label>
-                                <textarea className="form-control" rows="5" title="input"value={this.props.state.mainMessageText} onChange={this.handleMainMessageTextChange} />
                                 <FormGroup formGroup="col-md-6" label="Main Message Text Color" value={this.props.state.mainMessageTextColor} onChange={this.handleMainMessageTextColorChange} />
                             </div>
                         </div>
