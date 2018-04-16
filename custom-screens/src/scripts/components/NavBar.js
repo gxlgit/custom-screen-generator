@@ -8,6 +8,7 @@ class NavBar extends Component{
                 <a className="navbar-brand" href="#">
                     <img src={logo} alt="EverFi Logo" style={{height: "50px", maxHeight: "50px"}}/>
                 </a>
+                <p className="title">Custom Screen Generator</p>
             </nav>
         );
     }

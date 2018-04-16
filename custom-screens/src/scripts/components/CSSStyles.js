@@ -19,7 +19,7 @@ export class Option1 extends Component{
               background-color: #f8f9fa;
               border-bottom: 6px solid rgb(15, 174, 166); }
               .option-1 .cs-header .cs-header-text {
-                color: #000;
+                color: #ffffff;
                 font-size: 30px !important;
                 line-height: 30px !important;
                 padding: 25px 0px 0px 75px !important;

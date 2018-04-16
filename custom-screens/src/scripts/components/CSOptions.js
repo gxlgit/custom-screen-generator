@@ -19,6 +19,26 @@ class FormGroup extends Component{
     }
 }
 
+class FormGroupColor extends Component{
+    constructor(props){
+        super(props);
+    }
+
+    getFormClass(){
+        return "form-group-color " + this.props.formGroup;
+    }
+
+    render(){
+        return(
+            <div className={this.getFormClass()}>
+                <label className="font-weight-bold">{this.props.label}</label>
+                <input className="form-control" type={this.props.type} value={this.props.value} onChange={this.props.onChange} />
+                <input type="color" className="colorwheel" value={this.props.value} onChange={this.props.onChange} />
+            </div>
+        );
+    }
+}
+
 class Fonts extends Component{
     constructor(props){
         super(props);
@@ -174,8 +194,8 @@ export class Option1 extends Component {
                     <div id="globalOptionsCollapse-1" className="collapse" data-parent="customizationOptions-1">
                         <div className="card-body">
                             <div className="form-row">
-                                <FormGroup formGroup="col-md-6" label="Primary Color" value={this.props.state.priamryColor} onChange={this.handlePrimaryColorChange} />
-                                <FormGroup formGroup="col-md-6" label="Secondary Color" value={this.props.state.secondaryColor} onChange={this.handleSecondaryColorChange} />
+                                <FormGroupColor formGroup="col-md-6" label="Primary Color" value={this.props.state.primaryColor} onChange={this.handlePrimaryColorChange} />
+                                <FormGroupColor formGroup="col-md-6" label="Secondary Color" value={this.props.state.secondaryColor} onChange={this.handleSecondaryColorChange} />
                                 <div className="col-md-12">
                                     <label htmlFor="fontGroup">Font</label>
                                     <select className="form-control" id="fontGroup" onChange={this.handleFontChange} >
@@ -194,10 +214,9 @@ export class Option1 extends Component {
                         <div className="card-body">
                             <div className="form-row">
                                 <FormGroup formGroup="col-md-12" label="Header Text" value={this.props.state.headerText} onChange={this.handleHeaderTextChange} />
-                                <FormGroup formGroup="col-md-6" label="Text Color" value={this.props.state.headerTextColor} onChange={this.handleHeaderTextColorChange} />
-                                <FormGroup formGroup="col-md-6" label="Background Color" value={this.props.state.headerBackGroundColor} onChange={this.handleHeaderBackGroundColorChange} />
-                                <FormGroup formGroup="col-md-6" label="Border Color" value={this.props.state.headerBorderColor} onChange={this.handleHeaderBorderColorChange} />
-                                <FormGroup type="color" value={this.props.state.headerBorderColor} onChange={this.handleHeaderBorderColorChange} />
+                                <FormGroupColor formGroup="col-md-6" label="Text Color" value={this.props.state.headerTextColor} onChange={this.handleHeaderTextColorChange} />
+                                <FormGroupColor formGroup="col-md-6" label="Background Color" value={this.props.state.headerBackGroundColor} onChange={this.handleHeaderBackGroundColorChange} />
+                                <FormGroupColor formGroup="col-md-6" label="Border Color" value={this.props.state.headerBorderColor} onChange={this.handleHeaderBorderColorChange} />
                             </div>
                         </div>
                     </div>
@@ -237,8 +256,8 @@ export class Option1 extends Component {
                         <div className="card-body">
                             <div className="form-row">
                                 <FormGroup formGroup="col-md-6" label="Button Text" value={this.props.state.actionButtonText} onChange={this.handleActionButtonTextChange} />
-                                <FormGroup formGroup="col-md-6" label="Button Url" value={this.props.buttonHref} onChange={this.handleButtonHrefChange} />
-                                <FormGroup formGroup="col-md-6" label="Button Color" value={this.props.state.actionButtonColor} onChange={this.handleActionButtonColorChange} />
+                                <FormGroup formGroup="col-md-6" label="Button Url" value={this.props.state.buttonHref} onChange={this.handleButtonHrefChange} />
+                                <FormGroupColor formGroup="col-md-6" label="Button Color" value={this.props.state.actionButtonColor} onChange={this.handleActionButtonColorChange} />
                             </div>
                         </div>
                     </div>
@@ -250,7 +269,7 @@ export class Option1 extends Component {
                     <div id="additionalOptionsCollapse-1" className="collapse" data-parent="customizationOptions-1">
                         <div className="card-body">
                             <div className="form-row">
-                            <FormGroup formGroup="col-md-6" label="Bar Color" value={this.props.state.barColor} onChange={this.handleBarColorChange} />
+                            <FormGroupColor formGroup="col-md-6" label="Bar Color" value={this.props.state.barColor} onChange={this.handleBarColorChange} />
                             </div>
                         </div>
                     </div>

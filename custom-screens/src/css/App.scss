@@ -21,9 +21,9 @@ body {
     background: none;
     padding: 0px;
     border: none;
-    margin-top: 4px;
-        position: relative;
-    right: 49px;
+    position: absolute;
+    right: 4px;
+    bottom: -3px;
 }
 
 .navbar-brand img{
@@ -324,9 +324,18 @@ label{
     padding: 17px 25px !important;
   }
 
-  .navbar .fa-question-circle{
+  .navbar .help{
     color: #ffffff;
 }
-.navbar .fa-question-circle:hover{
+.navbar .help:hover{
     cursor:pointer;
+}
+.navbar .title{
+    margin: 0px;
+    color: #ffffff;
+}
+@media (min-width: 576px){
+.modal-dialog {
+    max-width: 1100px;
+}
 }
