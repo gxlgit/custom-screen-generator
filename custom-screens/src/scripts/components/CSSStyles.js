@@ -344,34 +344,53 @@ export class Option7 extends Component{
             padding: 0px 0px 0px 0px !important; 
             height:100% !important;    
         }
+        #site-container .modal .modal-body .option-7 p {
+            padding: 0px;
+        }
         .option-7 {
             width: 100%;
             height: 100%; }
-            .option-7 .cs-header .cs-header-text {
-              color: #000;
-              font-size: 28px !important;
-              padding: 225px 0px 0px 88px !important;}
+            .option-7 .cs-header {
+              height: 75px;
+              background-color: #f8f9fa;
+              border-bottom: 6px solid rgb(15, 174, 166); }
+              .option-7 .cs-header .cs-header-text {
+                color: #ffffff;
+                font-size: 30px !important;
+                line-height: 30px !important;
+                padding: 25px 0px 0px 40px !important;
+                font-family: inherit !important }
+                  .option-7 .col-50 {
+                    width: 50%;
+                    float: left;
+                    padding-right:40px; }
+                    .option-7 .cs-sub-heading {
+                      font-size: 24px !important;
+                      line-height: 27px !important;
+                      font-family: inherit !important;
+                      margin-bottom: 15px !important;
+                  }
+              #site-container .modal .modal-body p {
+                padding: 16px 0px;
+            }
             .option-7 .main-message {
               padding-top: 75px !important;
-                color: #fff !important;
-            }
+                color: #fff !important;}
             .option-7 .col-wrap {
               width: 100%;
               height: 100%;
               padding: 0px 0px; }
-            .option-7 .col-50 {
-              width: 50%;
-              float: left;
-              height: 100%;
-              padding: 40px 40px; }
+            .option-7 .col-100 {
+                padding:40px;
+                height: calc(100% - 75px);
+                overflow-y:auto; }
             .option-7 .action-button {
-              background-color: #25408f;
+              background-color: #0faea6;
               color: #fff;
               padding: 10px 28px;
               font-size: 16px;
               border-radius: 7px;
               margin-top: 20px;
-              margin-left: 15px;
               display: inline-block; }
         `
         return(
@@ -385,6 +404,9 @@ export class Option7 extends Component{
 export class Option8 extends Component{
     render(){
         const css = `
+        #site-container .custom-content .modal .modal-dialog .modal-content .modal-body {
+              padding: 0px 0px 0px 0px !important;
+              height: 100%; }
         .modal-dialog {
             height: 600px !important; }
             .modal-dialog .modal-content .modal-body {
@@ -399,18 +421,22 @@ export class Option8 extends Component{
             .option-8 .cs-header .cs-header-text {
                 color: #484848;
                 font-size: 35px !important;
-                line-height: 32px;
+                line-height: 41px !important;
                 font-weight:600 !important;
                 font-family: inherit !important}
             .option-8 .cs-sub-heading{
                 font-size:24px !important;
                 line-height: 30px;
-                font-family: inherit !important
+                font-family: inherit !important}
+            .option-8 hr{
+                margin-top: 1rem;
+                margin-bottom: 1rem;
             }
             .option-8 .col-wrap {
               width: 100%;
-              height: 100%;
-              padding: 0px 0px; }
+              height: calc(100% - 112px);
+              padding: 0px 0px;
+              overflow-y:auto; }
             .option-8 .col-100 {
               width: 100%;
               padding: 20px 40px; }
@@ -425,7 +451,7 @@ export class Option8 extends Component{
               padding: 10px 28px;
               font-size: 16px;
               border-radius: 7px;
-              margin-top: 20px;
+              margin: 20px 0px;
               display: inline-block;
               font-family: inherit !important }
             .option-8 .action-button:hover{

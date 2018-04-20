@@ -127,12 +127,7 @@ h3 {
 .form-control {
   color: #949494; }
 
-.modal-dialog {
-  height: 600px !important; }
-  .modal-dialog .modal-content .modal-body {
-    padding: 60px 0px 0px 0px !important; }
-
-.option-6 {
+/*.option-6 {
   width: 100%;
   height: 100%; }
   .option-6 .cs-header .cs-header-text {
@@ -176,11 +171,6 @@ h3 {
     width: 100%;
     height: 100%;
     padding: 0px 0px; }
-  .option-7 .col-50 {
-    width: 50%;
-    float: left;
-    height: 500px;
-    padding: 0px 40px; }
   .option-7 .action-button {
     background-color: #25408f;
     color: #fff;
@@ -189,7 +179,7 @@ h3 {
     border-radius: 7px;
     margin-top: 20px;
     margin-left: 15px;
-    display: inline-block; }
+    display: inline-block; }*/
 
 .screen-dropdown {
   width: 25.55%;
@@ -262,6 +252,10 @@ pre {
 form {
   margin: 20px 0px 20px 0px; }
 
+.form-group-color{
+  margin-bottom: 1rem;
+}
+
 label {
   font-size: 14px; }
 
@@ -280,8 +274,32 @@ label {
     color: #ffffff;
 }
 
+
+/*Help Modal*/
+#helpModal .modal-dialog .modal-content .modal-body {
+    padding: 25px 25px 0px 25px !important;
+}
+#helpModal h3{
+  font-weight: 400;
+  color: #464f4f;
+  margin-bottom: 10px;
+  font-size: 23px;
+}
+#helpModal .modal-header{
+  background: rgb(70, 79, 78);
+}
+#helpModal .modal-title{
+  font-weight: 400;
+  color: #ffffff;
+}
+#helpModal .close{
+    font-weight: 700;
+    color: #fff;
+    text-shadow: none;
+    opacity: 1;
+}
 @media(min-width: 576px){
-.modal-dialog {
+#helpModal .modal-dialog {
     max-width: 1100px;
 }
 }

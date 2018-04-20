@@ -166,8 +166,8 @@ export class Option2 extends Component{
     constructor(props){
         super(props);
         this.state = {
-            primaryColor: "",
-            secondaryColor: "",
+            primaryColor: "#286090",
+            secondaryColor: "#0faea6",
             font: "",
             headerText: "Did You Know?",
             headerTextColor: "#ffffff", 
@@ -300,8 +300,8 @@ export class Option3 extends Component{
     constructor(props){
         super(props);
         this.state = {
-            primaryColor: "",
-            secondaryColor: "",
+            primaryColor: "#286090",
+            secondaryColor: "#0faea6",
             font: "",
             headerText: "Did You Know?",
             headerTextColor: "#ffffff", 
@@ -434,8 +434,8 @@ export class Option4 extends Component{
     constructor(props){
         super(props);
         this.state = {
-            primaryColor: "",
-            secondaryColor: "",
+            primaryColor: "#286090",
+            secondaryColor: "#0faea6",
             font: "",
             headerText: "Did You Know?",
             headerTextColor: "#ffffff", 
@@ -577,8 +577,8 @@ export class Option5 extends Component{
     constructor(props){
         super(props);
         this.state = {
-            primaryColor: "",
-            secondaryColor: "",
+            primaryColor: "#286090",
+            secondaryColor: "#0faea6",
             font: "",
             headerText: "Did You Know?",
             leftColumnBackGroundColor: "#ffffff",
@@ -713,8 +713,8 @@ export class Option6 extends Component{
     constructor(props){
         super(props);
         this.state = {
-            primaryColor: "",
-            secondaryColor: "",
+            primaryColor: "#286090",
+            secondaryColor: "#0faea6",
             font: "",
             headerText: "Did You Know?",
             leftColumnBackGroundColor: "#ffffff",
@@ -849,22 +849,25 @@ export class Option7 extends Component{
     constructor(props){
         super(props);
         this.state = {
-            primaryColor: "",
-            secondaryColor: "",
+            primaryColor: "#286090",
+            secondaryColor: "#0faea6",
             font: "",
             headerText: "Did You Know?",
-            leftColumnBackGroundColor: "#fff",
-            rightColumnBackGroundColor: "#208aee",
-            headerTextColor: "#000000", 
+            subHeadingText1: "CTA 1",
+            subHeadingText2: "CTA 2",
+            headerBorderColor: "#0faea6",
+            leftColumnBackGroundColor: "#286090",
+            rightColumnBackGroundColor: "#ffffff",
+            headerTextColor: "#ffffff", 
             actionButtonText1: "Learn More", 
-            actionButtonColor1: "#5bbaed",
+            actionButtonColor1: "#0faea6",
             actionButtonText2: "Learn More", 
-            actionButtonColor2: "#5bbaed",
+            actionButtonColor2: "#0faea6",
             isSubHeadingBold: "normal",
             mainMessageText1: "Wherever you are in life, there is a plan to help you meet your needs.Visit us to learn more about the options available to you.",
-            mainMessageTextColor1: "#fff",
+            mainMessageTextColor1: "#333333",
             mainMessageText2: "Wherever you are in life, there is a plan to help you meet your needs.Visit us to learn more about the options available to you.",
-            mainMessageTextColor2: "#fff",
+            mainMessageTextColor2: "#333333",
             buttonHref1: "https://everfi.com",
             buttonHref2: "https://everfi.com"
         };
@@ -891,9 +894,27 @@ export class Option7 extends Component{
         })
     }
 
+    handleHeaderBorderColorChange = (updatedText) => {
+        this.setState({
+            headerBorderColor : updatedText
+        });
+    }
+
     handleHeaderTextChange = (updatedText) => {
         this.setState({
             headerText : updatedText
+        });
+    }
+
+    handleSubHeadingTextChange1 = (updatedText) => {
+        this.setState({
+            subHeadingText1 : updatedText
+        });
+    }
+
+    handleSubHeadingTextChange2 = (updatedText) => {
+        this.setState({
+            subHeadingText2 : updatedText
         });
     }
 
@@ -990,6 +1011,9 @@ export class Option7 extends Component{
                         onLeftColumnBackGroundColorChange = {this.handleLeftColumnBackGroundColorChange}
                         onRightColumnBackGroundColorChange={this.handleRightColumnBackGroundColorChange}
                         onHeaderTextChange = {this.handleHeaderTextChange}
+                        onSubHeadingTextChange1 = {this.handleSubHeadingTextChange1}
+                        onSubHeadingTextChange2 = {this.handleSubHeadingTextChange2}
+                        onHeaderBorderColorChange = {this.handleHeaderBorderColorChange}
                         onMainMessageTextChange1 = {this.handleMainMessageTextChange1}
                         onMainMessageTextColorChange1 = {this.handleMainMessageTextColorChange1}
                         onMainMessageTextChange2 = {this.handleMainMessageTextChange2}
@@ -1019,8 +1043,8 @@ export class Option8 extends Component{
     constructor(props){
         super(props);
         this.state = {
-            primaryColor: "",
-            secondaryColor: "",
+            primaryColor: "#286090",
+            secondaryColor: "#0faea6",
             font: "",
             headerText: "Did You Know?",
             headerTextColor: "#4E80B2", 
@@ -1104,9 +1128,9 @@ export class Option8 extends Component{
         });
     }
     
-    handlebodyBackGroundColorChange = (updatedText) => {
+    handleBodyBackGroundColorChange = (updatedText) => {
         this.setState({
-            headerTextColor : updatedText
+            bodyBackGroundColor : updatedText
         });
     }
 
