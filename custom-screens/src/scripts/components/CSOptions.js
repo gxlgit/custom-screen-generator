@@ -299,7 +299,7 @@ export class Option1 extends Component {
                     <div id="additionalOptionsCollapse-1" className="collapse" data-parent="customizationOptions-1">
                         <div className="card-body">
                             <div className="form-row">
-                            <FormGroupColor formGroup="col-md-6" label="Bar Color" value={this.props.state.barColor} onChange={this.handleBarColorChange} />
+                            <FormGroupColor formGroup="col-md-6" label="SideBar Color" value={this.props.state.barColor} onChange={this.handleBarColorChange} />
                             </div>
                         </div>
                     </div>
@@ -379,6 +379,15 @@ export class Option2 extends Component {
         }
         else{
             this.props.onIsSubHeadingBoldChange("normal");
+        }
+    }
+
+    handleIsDismissOnChange = (e) => {
+        if(e.target.checked == true){
+        this.props.onIsDismissOnChange("none");
+        }
+        else{
+            this.props.onIsDismissOnChange("inline-block");
         }
     }
 
@@ -478,6 +487,10 @@ export class Option2 extends Component {
                                 <FormGroup formGroup="col-md-6" label="Button Text" value={this.props.state.actionButtonText} onChange={this.handleActionButtonTextChange} />
                                 <FormGroupColor formGroup="col-md-6" label="Button Color" value={this.props.state.actionButtonColor} onChange={this.handleActionButtonColorChange} />
                                 <FormGroup formGroup="col-md-6" label="Button Url" value={this.props.state.buttonHref} onChange={this.handleButtonHrefChange} />
+                                <div className="form-check form-check-inline col-md-12">
+                                    <input className="form-check-input" type="checkbox" value={this.props.state.isDismissOn} onChange={this.handleIsDismissOnChange} />
+                                    <label className="form-check-label" htmlFor="hideNoThanks">Hide "No Thanks" button</label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -556,6 +569,15 @@ export class Option3 extends Component {
         }
         else{
             this.props.onIsSubHeadingBoldChange("normal");
+        }
+    }
+
+    handleIsDismissOnChange = (e) => {
+        if(e.target.checked == true){
+        this.props.onIsDismissOnChange("none");
+        }
+        else{
+            this.props.onIsDismissOnChange("inline-block");
         }
     }
 
@@ -642,6 +664,10 @@ export class Option3 extends Component {
                                 <FormGroup formGroup="col-md-6" label="Button Text" value={this.props.state.actionButtonText} onChange={this.handleActionButtonTextChange} />
                                 <FormGroup formGroup="col-md-6" label="Button Url" value={this.props.state.buttonHref} onChange={this.handleButtonHrefChange} />
                                 <FormGroupColor formGroup="col-md-6" label="Button Color" value={this.props.state.actionButtonColor} onChange={this.handleActionButtonColorChange} />
+                                <div className="form-check form-check-inline col-md-12">
+                                    <input className="form-check-input" type="checkbox" value={this.props.state.isDismissOn} onChange={this.handleIsDismissOnChange} />
+                                    <label className="form-check-label" htmlFor="hideNoThanks">Hide "No Thanks" button</label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -739,6 +765,15 @@ export class Option4 extends Component {
         }
     }
 
+    handleIsDismissOnChange = (e) => {
+        if(e.target.checked == true){
+        this.props.onIsDismissOnChange("none");
+        }
+        else{
+            this.props.onIsDismissOnChange("inline-block");
+        }
+    }
+
     handleButtonHrefChange = (e) => {
         this.props.onButtonHrefChange(e.target.value);
     }
@@ -823,6 +858,10 @@ export class Option4 extends Component {
                                 <FormGroup formGroup="col-md-6" label="Button Text" value={this.props.state.actionButtonText} onChange={this.handleActionButtonTextChange} />
                                 <FormGroup formGroup="col-md-6" label="Button Url" value={this.props.state.buttonHref} onChange={this.handleButtonHrefChange} />
                                 <FormGroupColor formGroup="col-md-6" label="Button Color" value={this.props.state.actionButtonColor} onChange={this.handleActionButtonColorChange} />
+                                <div className="form-check form-check-inline col-md-12">
+                                    <input className="form-check-input" type="checkbox" value={this.props.state.isDismissOn} onChange={this.handleIsDismissOnChange} />
+                                    <label className="form-check-label" htmlFor="hideNoThanks">Hide "No Thanks" button</label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -915,6 +954,15 @@ export class Option5 extends Component {
         this.props.onLeftColumnBackGroundColorChange(e.target.value)
     }
 
+    handleIsDismissOnChange = (e) => {
+        if(e.target.checked == true){
+        this.props.onIsDismissOnChange("none");
+        }
+        else{
+            this.props.onIsDismissOnChange("inline-block");
+        }
+    }
+
 
     sendCode(){
         var html = document.getElementById("option5").innerHTML;
@@ -979,6 +1027,10 @@ export class Option5 extends Component {
                                 <FormGroup formGroup="col-md-6" label="Button Text" value={this.props.state.actionButtonText} onChange={this.handleActionButtonTextChange} />
                                 <FormGroupColor formGroup="col-md-6" label="Button Color" value={this.props.state.actionButtonColor} onChange={this.handleActionButtonColorChange} />
                                 <FormGroup formGroup="col-md-6" label="Button Url" value={this.props.state.buttonHref} onChange={this.handleButtonHrefChange} />
+                                <div className="form-check form-check-inline col-md-12">
+                                    <input className="form-check-input" type="checkbox" value={this.props.state.isDismissOn} onChange={this.handleIsDismissOnChange} />
+                                    <label className="form-check-label" htmlFor="hideNoThanks">Hide "No Thanks" button</label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1059,6 +1111,15 @@ export class Option6 extends Component {
         this.props.onLeftColumnBackGroundColorChange(e.target.value)
     }
 
+    handleIsDismissOnChange = (e) => {
+        if(e.target.checked == true){
+        this.props.onIsDismissOnChange("none");
+        }
+        else{
+            this.props.onIsDismissOnChange("inline-block");
+        }
+    }
+
 
     sendCode(){
         var html = document.getElementById("option6").innerHTML;
@@ -1123,6 +1184,10 @@ export class Option6 extends Component {
                                 <FormGroup formGroup="col-md-6" label="Button Text" value={this.props.state.actionButtonText} onChange={this.handleActionButtonTextChange} />
                                 <FormGroupColor formGroup="col-md-6" label="Button Color" value={this.props.state.actionButtonColor} onChange={this.handleActionButtonColorChange} />
                                 <FormGroup formGroup="col-md-6" label="Button Url" value={this.props.state.buttonHref} onChange={this.handleButtonHrefChange} />
+                                <div className="form-check form-check-inline col-md-12">
+                                    <input className="form-check-input" type="checkbox" value={this.props.state.isDismissOn} onChange={this.handleIsDismissOnChange} />
+                                    <label className="form-check-label" htmlFor="hideNoThanks">Hide "No Thanks" button</label>
+                                </div>
                             </div>
                         </div>
                     </div>

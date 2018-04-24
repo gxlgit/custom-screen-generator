@@ -73,13 +73,14 @@ export class Option1 extends Component{
               font-size: 16px;
               border-radius: 7px;
               margin-top: 20px;
-              display: inline-block; }
+              display: inline-block;
+              transition: .15s all; }
             .option-1 .action-button:hover{
                 cursor:pointer;}
             .option-1 .close-button{
               background-color: #afafaf;
               color:#ffffff !important;
-               margin-left:15px !important;}
+               margin-right:15px !important;}
         `
         return(
             <style>
@@ -152,6 +153,10 @@ export class Option3 extends Component{
               margin-top: 20px;
               margin-left: 0px;
               display: inline-block; }
+              .option-3 .close-button{
+              background-color: #afafaf;
+              color:#ffffff !important;
+               margin-right:15px !important;}
         `
         return(
             <style>
@@ -219,6 +224,10 @@ export class Option4 extends Component{
               margin-top: 20px;
               margin-left: 15px;
               display: inline-block; }
+              .option-4 .close-button{
+              background-color: #afafaf;
+              color:#ffffff !important;
+               margin-right:15px !important;}
         `
         return(
             <style>
@@ -271,6 +280,10 @@ export class Option5 extends Component{
               bottom: 30px;
               right: 50px;
               display: inline-block; }
+              .option-5 .close-button{
+              background-color: #afafaf;
+              color:#ffffff !important;
+               margin-left:15px !important;}
         `
         return(
             <style>
@@ -323,6 +336,10 @@ export class Option6 extends Component{
               bottom: 30px;
               right: 50px;
               display: inline-block; }
+              .option-6 .close-button{
+              background-color: #afafaf;
+              color:#ffffff !important;
+               margin-right:15px !important;}
         `
         return(
             <style>
@@ -389,6 +406,10 @@ export class Option7 extends Component{
               border-radius: 7px;
               margin-top: 20px;
               display: inline-block; }
+              .option-7 .close-button{
+              background-color: #afafaf;
+              color:#ffffff !important;
+               margin-left:15px !important;}
         `
         return(
             <style>
@@ -456,7 +477,7 @@ export class Option8 extends Component{
             .option-8 .close-button{
               background-color: #afafaf;
               color:#ffffff !important;
-               margin-left:15px !important;}
+               margin-right:15px !important;}
         `
         return(
             <style>
