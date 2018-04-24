@@ -15,14 +15,15 @@ export class Option1 extends Component{
             width: 100%;
             height: 100%; }
             .option-1 .cs-header {
-              height: 75px;
-              background-color: #f8f9fa;
-              border-bottom: 6px solid rgb(15, 174, 166); }
+              padding: 40px 40px 0px 40px !important;
+              height: 105px;
+              margin-left: 50px;
+              background-color:#ffffff;}
               .option-1 .cs-header .cs-header-text {
                 color: #ffffff;
-                font-size: 30px !important;
-                line-height: 30px !important;
-                padding: 25px 0px 0px 75px !important;
+                font-size: 40px !important;
+                line-height: 40px !important;
+                font-weight:bold !important;
                 font-family: inherit !important }
             .option-1 .cs-sub-heading{
                 font-size:24px !important;
@@ -39,14 +40,15 @@ export class Option1 extends Component{
               line-height: 23px;
             }
             .option-1 .col-wrap {
-              width: 100%;
-              height: calc(100% - 75px);
-              padding: 0px 0px; }
+              height: calc(100% - 105px);
+              padding: 40px 40px;
+              margin-left: 50px;
+              background-color:#ffffff; }
             .option-1 .cs-bar {
-              width: 75%;
+              width: 50px;
               height: 100%;
               background-color: #f8f9fa;
-              float: right; }
+              float:left;}
               .option-1 .lines {
                 border-left: 5px solid;
                 border-top: 5px solid;
@@ -62,9 +64,6 @@ export class Option1 extends Component{
               height: 100%;
               float: left; }
             .option-1 .col-70 {
-              width: 70%;
-              float: right;
-              padding: 40px 40px;
               overflow-y: auto;
               height: 100%; }
             .option-1 .action-button {
@@ -81,8 +80,6 @@ export class Option1 extends Component{
               background-color: #afafaf;
               color:#ffffff !important;
                margin-left:15px !important;}
-               #site-container .custom-content .modal .modal-dialog .modal-content .modal-footer .btn{
-                display:none;}
         `
         return(
             <style>
@@ -354,24 +351,24 @@ export class Option7 extends Component{
               height: 75px;
               background-color: #f8f9fa;
               border-bottom: 6px solid rgb(15, 174, 166); }
-              .option-7 .cs-header .cs-header-text {
-                color: #ffffff;
-                font-size: 30px !important;
-                line-height: 30px !important;
-                padding: 25px 0px 0px 40px !important;
-                font-family: inherit !important }
-                  .option-7 .col-50 {
-                    width: 50%;
-                    float: left;
-                    padding-right:40px; }
-                    .option-7 .cs-sub-heading {
-                      font-size: 24px !important;
-                      line-height: 27px !important;
-                      font-family: inherit !important;
-                      margin-bottom: 15px !important;
-                  }
-              #site-container .modal .modal-body p {
-                padding: 16px 0px;
+            .option-7 .cs-header .cs-header-text {
+              color: #ffffff;
+              font-size: 30px !important;
+              line-height: 30px !important;
+              padding: 25px 0px 0px 40px !important;
+              font-family: inherit !important }
+            .option-7 .col-50 {
+              width: 50%;
+              float: left;
+              padding-right:40px; }
+            .option-7 .cs-sub-heading {
+              font-size: 24px !important;
+              line-height: 27px !important;
+              font-family: inherit !important;
+              margin-bottom: 15px !important;
+            }
+            #site-container .modal .modal-body p {
+              padding: 16px 0px;
             }
             .option-7 .main-message {
               padding-top: 75px !important;
@@ -460,8 +457,6 @@ export class Option8 extends Component{
               background-color: #afafaf;
               color:#ffffff !important;
                margin-left:15px !important;}
-               #site-container .custom-content .modal .modal-dialog .modal-content .modal-footer .btn{
-                display:none;}
         `
         return(
             <style>

@@ -1,6 +1,8 @@
 aside, main {
   padding: 10px; }
-
+hr{
+  position: relative;
+}
 ul li {
   list-style-type: none; }
   ul li a {
@@ -252,13 +254,17 @@ pre {
 form {
   margin: 20px 0px 20px 0px; }
 
-.form-group-color{
+.form-group-color, .form-group-text-area{
   margin-bottom: 1rem;
 }
-
+.form-check-label {
+    font-weight: bold;
+}
 label {
   font-size: 14px; }
-
+.label-margin-bottom{
+  margin-bottom: 20px;
+}
 .fixed-bottom{
     padding: 17px 25px !important;
   }

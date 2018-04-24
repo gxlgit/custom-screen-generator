@@ -19,6 +19,25 @@ class FormGroup extends Component{
     }
 }
 
+class FormGroupTextArea extends Component{
+    constructor(props){
+        super(props);
+    }
+
+    getFormClass(){
+        return "form-group-text-area " + this.props.formGroup;
+    }
+
+    render(){
+        return(
+            <div className={this.getFormClass()}>
+                <label className="font-weight-bold">{this.props.label}</label>
+                <textarea className="form-control" rows="5" title="input" value={this.props.value} onChange={this.props.onChange} />
+            </div>
+        );
+    }
+}
+
 class FormGroupColor extends Component{
     constructor(props){
         super(props);
@@ -163,6 +182,15 @@ export class Option1 extends Component {
         }
     }
 
+    handleIsDismissOnChange = (e) => {
+        if(e.target.checked == true){
+        this.props.onIsDismissOnChange("none");
+        }
+        else{
+            this.props.onIsDismissOnChange("inline-block");
+        }
+    }
+
     handleLinesColorChange = (e) => {
         this.props.onLinesColorChange(e.target.value);
     }
@@ -215,8 +243,6 @@ export class Option1 extends Component {
                             <div className="form-row">
                                 <FormGroup formGroup="col-md-12" label="Header Text" value={this.props.state.headerText} onChange={this.handleHeaderTextChange} />
                                 <FormGroupColor formGroup="col-md-6" label="Text Color" value={this.props.state.headerTextColor} onChange={this.handleHeaderTextColorChange} />
-                                <FormGroupColor formGroup="col-md-6" label="Background Color" value={this.props.state.headerBackGroundColor} onChange={this.handleHeaderBackGroundColorChange} />
-                                <FormGroupColor formGroup="col-md-6" label="Border Color" value={this.props.state.headerBorderColor} onChange={this.handleHeaderBorderColorChange} />
                             </div>
                         </div>
                     </div>
@@ -258,6 +284,10 @@ export class Option1 extends Component {
                                 <FormGroup formGroup="col-md-6" label="Button Text" value={this.props.state.actionButtonText} onChange={this.handleActionButtonTextChange} />
                                 <FormGroup formGroup="col-md-6" label="Button Url" value={this.props.state.buttonHref} onChange={this.handleButtonHrefChange} />
                                 <FormGroupColor formGroup="col-md-6" label="Button Color" value={this.props.state.actionButtonColor} onChange={this.handleActionButtonColorChange} />
+                                <div className="form-check form-check-inline col-md-12">
+                                    <input className="form-check-input" type="checkbox" value={this.props.state.isDismissOn} onChange={this.handleIsDismissOnChange} />
+                                    <label className="form-check-label" htmlFor="hideNoThanks">Hide "No Thanks" button</label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1133,6 +1163,17 @@ export class Option7 extends Component {
         this.props.onFontChange(e.target.value);
     }
 
+    handleIsBody2OnChange = (e) => {
+        if(e.target.checked == true){
+        this.props.onIsBody2OnChange("none");
+        this.props.onIsBody1FullChange("100%");
+        }
+        else{
+            this.props.onIsBody2OnChange("block");
+            this.props.onIsBody1FullChange("50%");
+        }
+    }
+
     handleHeaderBorderColorChange = (e) => {
         this.props.onHeaderBorderColorChange(e.target.value);
     }
@@ -1259,8 +1300,7 @@ export class Option7 extends Component {
                         <div className="card-body">
                             <div className="form-row">
                                 <FormGroup formGroup="col-md-12" label="Sub Heading Text" value={this.props.state.subHeadingText1} onChange={this.handleSubHeadingTextChange1} />
-                                <label className="font-weight-bold"> Main Message Text </label>
-                                <textarea className="form-control" rows="5" title="input" value={this.props.state.mainMessageText1} onChange={this.handleMainMessageTextChange1} />
+                                <FormGroupTextArea formGroup="col-md-12" label="Main Message Text" value={this.props.state.mainMessageText1} onChange={this.handleMainMessageTextChange1} />
                                 <FormGroup formGroup="col-md-6" label="Button Text" value={this.props.state.actionButtonText1} onChange={this.handleActionButtonTextChange1} />
                                 <FormGroup formGroup="col-md-6" label="Button Url" value={this.props.state.buttonHref1} onChange={this.handleButtonHrefChange1} />
                                 <FormGroupColor formGroup="col-md-6" label="Button Color" value={this.props.state.actionButtonColor1} onChange={this.handleActionButtonColorChange1} />
@@ -1275,9 +1315,12 @@ export class Option7 extends Component {
                     <div id="mainOptions2Collapse-7" className="collapse" data-parent="customizationOptions-7">
                         <div className="card-body">
                             <div className="form-row">
+                                <div className="form-check form-check-inline col-md-12 label-margin-bottom">
+                                    <input className="form-check-input" type="checkbox" value={this.props.state.isBody2On} onChange={this.handleIsBody2OnChange} />
+                                    <label className="form-check-label" htmlFor="hideBody2">Turn off Body 2</label>
+                                </div>
                                 <FormGroup formGroup="col-md-12" label="Sub Heading Text" value={this.props.state.subHeadingText2} onChange={this.handleSubHeadingTextChange2} />
-                                <label className="font-weight-bold"> Main Message Text </label>
-                                <textarea className="form-control" rows="5" title="input" value={this.props.state.mainMessageText2} onChange={this.handleMainMessageTextChange2} />
+                                <FormGroupTextArea formGroup="col-md-12" label="Main Message Text" value={this.props.state.mainMessageText2} onChange={this.handleMainMessageTextChange2} />
                                 <FormGroup formGroup="col-md-6" label="Button Text" value={this.props.state.actionButtonText2} onChange={this.handleActionButtonTextChange2} />
                                 <FormGroup formGroup="col-md-6" label="Button Url" value={this.props.state.buttonHref2} onChange={this.handleButtonHrefChange2} />
                                 <FormGroupColor formGroup="col-md-6" label="Button Color" value={this.props.state.actionButtonColor2} onChange={this.handleActionButtonColorChange2} />
@@ -1382,6 +1425,15 @@ export class Option8 extends Component {
         }
     }
 
+    handleIsDismissOnChange = (e) => {
+        if(e.target.checked == true){
+        this.props.onIsDismissOnChange("none");
+        }
+        else{
+            this.props.onIsDismissOnChange("inline-block");
+        }
+    }
+
     handleButtonHrefChange = (e) => {
         this.props.onButtonHrefChange(e.target.value);
     }
@@ -1466,6 +1518,10 @@ export class Option8 extends Component {
                                 <FormGroup formGroup="col-md-6" label="Button Text" value={this.props.state.actionButtonText} onChange={this.handleActionButtonTextChange} />
                                 <FormGroup formGroup="col-md-6" label="Button Url" value={this.props.state.buttonHref} onChange={this.handleButtonHrefChange} />
                                 <FormGroupColor formGroup="col-md-6" label="Button Color" value={this.props.state.actionButtonColor} onChange={this.handleActionButtonColorChange} />
+                                <div className="form-check form-check-inline col-md-12">
+                                    <input className="form-check-input" type="checkbox" value={this.props.state.isDismissOn} onChange={this.handleIsDismissOnChange} />
+                                    <label className="form-check-label" htmlFor="hideNoThanks">Hide "No Thanks" button</label>
+                                </div>
                             </div>
                         </div>
                     </div>

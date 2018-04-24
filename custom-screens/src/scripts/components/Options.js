@@ -11,13 +11,12 @@ export class Option1 extends Component{
             secondaryColor: "#0faea6",
             font: "",
             headerText: "Did You Know?",
-            headerTextColor: "#ffffff", 
+            headerTextColor: "#366e9f", 
             subHeadingText: "We offer Associates tools to help manage insurance costs.", actionButtonText: "Learn More", 
             actionButtonColor: "#10AEA6",
-            headerBackGroundColor: "#286090",
-            headerBorderColor: "#0faea6",  
             isSubHeadingBold: "normal",
             isMainMessageBold: "normal",
+            isDismissOn: "inline-block",
             mainMessageText: "Wherever you are in life, there is a plan to help you meet your needs. Visit us to learn more about the options available to you.",
             barColor: "#366e9f",
             linesColor: "#208aee",
@@ -63,6 +62,12 @@ export class Option1 extends Component{
     handleIsSubHeadingBoldChange = (updatedText) => {
         this.setState({
             isSubHeadingBold: updatedText
+        })
+    }
+
+    handleIsDismissOnChange = (updatedText) => {
+        this.setState({
+            isDismissOn: updatedText
         })
     }
 
@@ -146,6 +151,7 @@ export class Option1 extends Component{
                         onLinesColorChange = {this.handleLinesColorChange}
                         onIsSubHeadingBoldChange = {this.handleIsSubHeadingBoldChange}
                         onIsMainMessageBoldChange = {this.handleIsMainMessageBoldChange}
+                        onIsDismissOnChange = {this.handleIsDismissOnChange}
                         onBarColorChange = {this.handleBarColorChange}
                         onHeaderBorderColorChange = {this.handleHeaderBorderColorChange}
                         onButtonHrefChange = {this.handleButtonHrefChange}
@@ -864,9 +870,11 @@ export class Option7 extends Component{
             actionButtonText2: "Learn More", 
             actionButtonColor2: "#0faea6",
             isSubHeadingBold: "normal",
-            mainMessageText1: "Wherever you are in life, there is a plan to help you meet your needs.Visit us to learn more about the options available to you.",
+            isBody2On: "block",
+            isBody1Full: "50%",
+            mainMessageText1: "Wherever you are in life, there is a plan to help you meet your needs. Visit us to learn more about the options available to you.",
             mainMessageTextColor1: "#333333",
-            mainMessageText2: "Wherever you are in life, there is a plan to help you meet your needs.Visit us to learn more about the options available to you.",
+            mainMessageText2: "Wherever you are in life, there is a plan to help you meet your needs. Visit us to learn more about the options available to you.",
             mainMessageTextColor2: "#333333",
             buttonHref1: "https://everfi.com",
             buttonHref2: "https://everfi.com"
@@ -891,6 +899,18 @@ export class Option7 extends Component{
     handleFontChange = (updatedText) => {
         this.setState({
             font: updatedText
+        })
+    }
+
+    handleIsBody2OnChange = (updatedText) => {
+        this.setState({
+            isBody2On: updatedText
+        })
+    }
+
+    handleIsBody1FullChange = (updatedText) => {
+        this.setState({
+            isBody1Full: updatedText
         })
     }
 
@@ -1023,6 +1043,8 @@ export class Option7 extends Component{
                         onActionButtonTextChange2 = {this.handleActionButtonTextChange2}
                         onActionButtonColorChange2 = {this.handleActionButtonColorChange2}
                         onHeaderTextColorChange = {this.handleHeaderTextColorChange}
+                        onIsBody2OnChange = {this.handleIsBody2OnChange}
+                        onIsBody1FullChange = {this.handleIsBody1FullChange}
                         onBarColorChange = {this.handleBarColorChange}
                         onButtonHrefChange1 = {this.handleButtonHrefChange1}
                         onButtonHrefChange2 = {this.handleButtonHrefChange2}
@@ -1052,6 +1074,7 @@ export class Option8 extends Component{
             actionButtonColor: "#10aea6",
             bodyBackGroundColor: "#ffffff", 
             isSubHeadingBold: "normal",
+            isDismissOn: "inline-block",
             mainMessageText: "Wherever you are in life, there is a plan to help you meet your needs. Visit us to learn more about the options available to you.",
             mainMessageTextColor: "#484848",
             buttonHref: "https://everfi.com"
@@ -1093,6 +1116,12 @@ export class Option8 extends Component{
     handleIsSubHeadingBoldChange = (updatedText) => {
         this.setState({
             isSubHeadingBold: updatedText
+        })
+    }
+
+    handleIsDismissOnChange = (updatedText) => {
+        this.setState({
+            isDismissOn: updatedText
         })
     }
 
@@ -1164,8 +1193,8 @@ export class Option8 extends Component{
                         onActionButtonColorChange = {this.handleActionButtonColorChange}
                         onHeaderBorderColorChange = {this.handleHeaderBorderColorChange}
                         onHeaderTextColorChange = {this.handleHeaderTextColorChange}
-                        
                         onIsSubHeadingBoldChange = {this.handleIsSubHeadingBoldChange}
+                        onIsDismissOnChange = {this.handleIsDismissOnChange}
                         onButtonHrefChange = {this.handleButtonHrefChange}
                     />
                     </div>

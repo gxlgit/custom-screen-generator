@@ -7,24 +7,19 @@ export class Option1 extends Component{
     }
     render(){
         return(
-            <div className="option-1" style={{fontFamily: this.props.state.font}}>
-                    <div className="cs-header" style={{
-                        background: this.props.state.headerBackGroundColor,borderBottomColor: this.props.state.headerBorderColor
-                        }}>
+            <div className="option-1" style={{background: this.props.state.barColor, fontFamily: this.props.state.font}}>
+                    <div className="cs-header">
                         <p className="cs-header-text" style={{color: this.props.state.headerTextColor}}>{this.props.state.headerText}</p>
+                        <hr />
                     </div>
                     <div className="col-wrap">
-                        <div className="col-30">
-                            <div className="cs-bar" style={{background: this.props.state.barColor}}>
-                            </div>
-                        </div>
                         <div className="col-70">
                             <p className="cs-sub-heading" style={{
                                 fontWeight: this.props.state.isSubHeadingBold
                                 }}>{this.props.state.subHeadingText}</p>
                             <p className="mainMessage" style={{fontWeight: this.props.state.isMainMessageBold}}>{this.props.state.mainMessageText}</p>
                             <a className="action-button" style={{backgroundColor: this.props.state.actionButtonColor}} href={this.props.state.buttonHref} target="_blank">{this.props.state.actionButtonText}</a>
-                            <a className="action-button close-button" data-dismiss="modal" data-close="true">No Thanks</a>
+                            <a className="action-button close-button" style={{display: this.props.state.isDismissOn}} data-dismiss="modal" data-close="true">No Thanks</a>
                     </div>
                 </div>
             </div>
@@ -165,12 +160,12 @@ export class Option7 extends Component{
                         <p className="cs-header-text" style={{color: this.props.state.headerTextColor}}>{this.props.state.headerText}</p>
                     </div>
                     <div className="col-100" style={{backgroundColor: this.props.state.rightColumnBackGroundColor}}>
-                        <div class="col-50">
+                        <div class="col-50" style={{width: this.props.state.isBody1Full}}>
                             <p className="cs-sub-heading" style={{fontWeight: this.props.state.isSubHeadingBold}}>{this.props.state.subHeadingText1}</p>
                             <p className="mainMessage" style={{color: this.props.state.mainMessageTextColor1}}>{this.props.state.mainMessageText1}</p>
                             <a className="action-button" style={{backgroundColor: this.props.state.actionButtonColor1}} href={this.props.state.buttonHref1}  target="_blank">{this.props.state.actionButtonText1}</a>
                         </div>
-                        <div class="col-50">
+                        <div class="col-50" style={{display: this.props.state.isBody2On}}>
                             <p className="cs-sub-heading" style={{fontWeight: this.props.state.isSubHeadingBold}}>{this.props.state.subHeadingText2}</p>
                             <p className="mainMessage" style={{color: this.props.state.mainMessageTextColor2}}>{this.props.state.mainMessageText2}</p>
                             <a className="action-button" style={{backgroundColor: this.props.state.actionButtonColor2}} href={this.props.state.buttonHref2}  target="_blank">{this.props.state.actionButtonText2}</a>
@@ -200,7 +195,7 @@ export class Option8 extends Component{
                                 }}>{this.props.state.subHeadingText}</p>
                             <p className="mainMessage" style={{color: this.props.state.mainMessageTextColor}}>{this.props.state.mainMessageText}</p>
                             <a className="action-button" style={{backgroundColor: this.props.state.actionButtonColor}} href={this.props.state.buttonHref}  target="_blank">{this.props.state.actionButtonText}</a>
-                            <a className="action-button close-button" data-dismiss="modal" data-close="true">No Thanks</a>
+                            <a className="action-button close-button" style={{display: this.props.state.isDismissOn}} data-dismiss="modal" data-close="true">No Thanks</a>
                     </div>
                 </div>
             </div>
