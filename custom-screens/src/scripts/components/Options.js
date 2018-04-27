@@ -1245,3 +1245,39 @@ export class Option8 extends Component{
         );
     }
 }
+
+
+export class OptionForm extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            buttonHref: "https://docs.google.com/forms/d/e/1FAIpQLSfWPAGRbuxHNZ16kgyHMGW7srAaWn-XRKcLoiGjZpVlHXzrig/viewform?usp=sf_link"
+        };
+    }
+
+    handleButtonHrefChange = (updatedText) => {
+        this.setState({
+            buttonHref : updatedText
+        });
+    }
+
+
+    render(){
+        return(
+                <div className="row mt-3">
+                    <div className="col-md-3 aside-options-list">
+                        <CSOptions.OptionForm 
+                        state = {this.state}
+                        onButtonHrefChange = {this.handleButtonHrefChange}
+                    />
+                    </div>
+                    <div className="col-md-9" id="optionForm">
+                        <CSSStyles.OptionForm />
+                        <HTMLCode.OptionForm 
+                        state = {this.state}
+                        />
+                    </div>
+                </div>
+        );
+    }
+}

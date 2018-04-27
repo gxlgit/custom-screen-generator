@@ -1609,3 +1609,60 @@ export class Option8 extends Component {
         );
     }
 }
+
+
+
+export class OptionForm extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    
+    handleButtonHrefChange = (e) => {
+        this.props.onButtonHrefChange(e.target.value);
+    }
+
+    sendCode(){
+        var html = document.getElementById("optionForm").innerHTML;
+        var copyElem = document.createElement("input");
+        copyElem.setAttribute("value", html);
+        document.body.appendChild(copyElem);
+        copyElem.select();
+        document.execCommand("copy");
+        document.body.removeChild(copyElem);
+        alert("Code copied to clipboard!");
+    }
+
+    render() {
+        return (       
+            <div id="customizationOptions-form">
+                <div className="card">
+                    <div className="card-header">
+                        <h3><button className="btn btn-link" data-toggle="collapse" data-target="#buttonCollapse-8">Form Input <i className="fa fa-chevron-down" /></button></h3>
+                    </div>
+                    <div id="buttonCollapse-8" className="collapse show" data-parent="buttonOptions-8">
+                        <div className="card-body">
+                            <div className="form-row">
+                                <FormGroup formGroup="col-md-12" label="iframe src" value={this.props.state.buttonHref} onChange={this.handleButtonHrefChange} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="card">
+                    <div className="card-header">
+                        <h3><button className="btn btn-link" data-toggle="collapse" data-target="#sendCollapse-8">Review <i className="fa fa-chevron-down" /></button></h3>
+                    </div>
+                    <div id="sendCollapse-8" className="collapse show" data-parent="customizationOptions-8">
+                        <div className="card-body">
+                            <div className="form-row">
+                                <div className="form-group col-md-6">
+                                    <button className="btn btn-primary btn-send" onClick={this.sendCode}>Copy Code</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}

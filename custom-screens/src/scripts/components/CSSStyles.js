@@ -11,6 +11,10 @@ export class Option1 extends Component{
             #site-container .main p, #site-container .main .description{
               color:#333333;
             }
+        .option-1 hr{
+          position:relative;
+          z-index:1;
+        }
         .option-1 {
             width: 100%;
             height: 100%; }
@@ -478,6 +482,29 @@ export class Option8 extends Component{
               background-color: #afafaf;
               color:#ffffff !important;
                margin-right:15px !important;}
+        `
+        return(
+            <style>
+                {css}
+            </style>
+        )
+    }
+}
+
+export class OptionForm extends Component{
+    render(){
+        const css = `
+          #site-container .custom-content .modal .modal-dialog .modal-content .modal-body {
+              height: 100% !important;
+              padding: 0px !important;
+          }
+          #custom-screen-iframe{
+            width:100%;
+            height:100%;
+          }
+          .option-form{
+            height:100%;
+          }
         `
         return(
             <style>

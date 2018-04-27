@@ -204,3 +204,16 @@ export class Option8 extends Component{
         );
     }
 }
+
+export class OptionForm extends Component{
+    constructor(props){
+        super(props);
+    }
+    render(){
+        return(
+            <div className="option-form" style={{background: this.props.state.bodyBackGroundColor, fontFamily: this.props.state.font}}>
+                <iframe id="custom-screen-iframe" src={this.props.state.buttonHref} />
+            </div>
+        );
+    }
+}
