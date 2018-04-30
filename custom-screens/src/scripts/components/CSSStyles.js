@@ -505,6 +505,18 @@ export class OptionForm extends Component{
           .option-form{
             height:100%;
           }
+          @media (max-width:1030px){
+              #site-container .custom-content .modal .modal-dialog {
+              width: 100%;
+          }
+          }
+
+          @media screen and (max-width: 773px){
+              #site-container .main>:not(.menu) .custom-content .modal .modal-dialog {
+                  -webkit-transform: scale(0.9, 0.9) translate(-1%, -17%);
+                  transform: scale(0.9, 0.9) translate(-1%, -17%);
+              }
+          }
         `
         return(
             <style>
